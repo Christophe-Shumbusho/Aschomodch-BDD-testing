@@ -60,7 +60,10 @@ public class PlaceOrderSteps {
     public void i_click_on() {
         WebElement placeOrder = driver.findElement(By.cssSelector("button[id='place_order']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placeOrder);
-        wait.until(ExpectedConditions.elementToBeClickable(placeOrder)).click();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("button alt")));
+
+        wait.until(ExpectedConditions.elementToBeClickable(placeOrder));
+        driver.findElement(By.cssSelector("button[id='place_order']")).click();
 
     }
     @Then("the order is placed successfully")

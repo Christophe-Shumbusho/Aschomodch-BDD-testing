@@ -7,8 +7,8 @@ Feature: Registration functionality
 
     Given I am on the registration page
     When I register with valid details:
-      | userName | Christoy ttd|
-      | email| tti@elll.com |
+      | userName | Christoo ttd|
+      | email| tti@ello.com |
       | password | ^Strong-Pass123 |
     Then I should be redirected to the dashboard and see welcome message
 

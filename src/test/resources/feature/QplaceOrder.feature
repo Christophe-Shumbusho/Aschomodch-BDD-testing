@@ -19,8 +19,3 @@ Feature: Place order
     And I click on Place order button
     Then the order is placed successfully
 
-#  Scenario: Fail to place an order with empty required fields
-#    When I leave required billing fields empty
-#    And I click on "Place order"
-#    Then error messages are displayed for each empty required field
-#    And the order is not placed
