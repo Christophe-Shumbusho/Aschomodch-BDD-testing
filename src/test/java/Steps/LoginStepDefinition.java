@@ -54,7 +54,7 @@ public class LoginStepDefinition {
     public void get_error_message(){
      wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul.woocommerce-error li")));
      String errorMessage = driver.findElement(By.cssSelector("ul.woocommerce-error li")).getText();
-     assertTrue(errorMessage.contains("incorrect. Lost your password?"));
+     assertTrue(errorMessage.contains("The username Christophe is not registered on this site. If you are unsure of your username, try your email address instead."));
         System.out.println(errorMessage);
     }
     @And("I should see the option Lost your password? option")
