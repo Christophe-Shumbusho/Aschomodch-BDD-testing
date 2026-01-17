@@ -7,15 +7,11 @@ Feature: Registration functionality
 
     Given I am on the registration page
     When I register with valid details:
-<<<<<<< HEAD
-      | userName | Christo tester     |
-      | email    | tter@exiopmple.com |
-      | password | ^Strong-Pass123    |
-=======
-      | userName | Christoy ttd|
-      | email| tti@elll.com |
+
+      | userName | Christopp ttd|
+      | email| tti@elool.com |
       | password | ^Strong-Pass123 |
->>>>>>> main
+
     Then I should be redirected to the dashboard and see welcome message
 
   Scenario: Registration with existing email
