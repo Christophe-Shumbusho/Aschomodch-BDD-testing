@@ -11,12 +11,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      # Install Chrome
+     # Install Chrome 
       - name: Setup Chrome 
-        uses: browser-actions/setup-chrome@latest 
+        uses: browser-actions/setup-chrome@v1 
       # Install matching ChromeDriver 
       - name: Setup ChromeDriver 
-        uses: nanasess/setup-chromedriver@latest
+        uses: nanasess/setup-chromedriver@v2
 
 
       - name: Setup Java
