@@ -16,7 +16,7 @@ jobs:
         uses: browser-actions/setup-chrome@latest 
       # Install matching ChromeDriver 
       - name: Setup ChromeDriver 
-        uses: browser-actions/setup-chromedriver@latest
+        uses: nanasess/setup-chromedriver@latest
 
 
       - name: Setup Java
