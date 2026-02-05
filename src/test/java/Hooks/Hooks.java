@@ -24,7 +24,7 @@ public class Hooks {
         options.addArguments("--disable-dev-shm-usage"); // prevent crashes in limited /dev/shm
         options.addArguments("--remote-allow-origins=*"); // fixes some CI/CD origin issues
         driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1920,1080)); // instead of maximize }
+        driver.manage().window().setSize(new Dimension(1920,1080)); // instead of maximize
     }
     @After
     public void tearDown(){
