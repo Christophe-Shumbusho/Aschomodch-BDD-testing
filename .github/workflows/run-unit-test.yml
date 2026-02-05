@@ -10,10 +10,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
+      
+      - name: Install Chrome 
+        run: | 
+         sudo apt-get update 
+         sudo apt-get install -y 
+         wget gnupg wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+         sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' 
+         sudo apt-get update 
+         sudo apt-get install -y google-chrome-stable
+
+      - name: Install ChromeDriver 
+        run: | 
+         CHROME_VERSION=$(google-chrome --version | awk '{print $3}') 
+         DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE") 
+         wget https://chromedriver.storage.googleapis.com/$DRIVER_VERSION/chromedriver_linux64.zip 
+         unzip chromedriver_linux64.zip 
+         sudo mv chromedriver /usr/local/bin/
 
 
       - name: Setup Java
