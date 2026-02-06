@@ -56,7 +56,7 @@ public class RegistrationSteps {
     public void i_should_be_redirected_to_the_dashboard_and_see_welcome_message() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.woocommerce-MyAccount-content p")));
         String getUserName = driver.findElement(By.cssSelector("div.woocommerce-MyAccount-content p")).getText();
-        Assert.assertEquals("Hello chisttopp ttd (not chisttopp ttd? Log out)",getUserName);
+        Assert.assertEquals("Hello christtopp ttd (not christtopp ttd? Log out)",getUserName);
         System.out.println(getUserName);
 
     }

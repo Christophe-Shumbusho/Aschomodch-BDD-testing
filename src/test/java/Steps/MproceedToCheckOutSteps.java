@@ -34,10 +34,10 @@ public class MproceedToCheckOutSteps {
     }
     @When("I am on the cart page Then the Proceed to checkout button is visible")
     public void i_am_on_the_cart_page_then_the_proceed_to_checkout_button_is_visible() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement viewCartButton =  driver.findElement(By.cssSelector("a.button.wc-forward"));
         viewCartButton.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         WebElement proceedToCheckout = driver.findElement(By.cssSelector(".checkout-button.button.alt.wc-forward"));
         boolean isProceedToCardDisplayed = proceedToCheckout.isDisplayed();
         System.out.println(isProceedToCardDisplayed);
