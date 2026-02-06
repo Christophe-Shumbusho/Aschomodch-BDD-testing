@@ -14,11 +14,11 @@ jobs:
 
       # Install Chrome
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@latest
+        uses: browser-actions/setup-chrome@v1
 
       # Install matching ChromeDriver
       - name: Setup ChromeDriver
-        uses: nanasess/setup-chromedriver@latest
+        uses: nanasess/setup-chromedriver@v2
 
       - name: Setup Java
         uses: actions/setup-java@v3
