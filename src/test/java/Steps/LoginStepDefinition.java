@@ -27,8 +27,8 @@ public class LoginStepDefinition {
     @When("I enter valid credentials")
     public void i_enter_valid_credentials() {
 
-        driver.findElement(By.id("username")).sendKeys("Christ");
-        driver.findElement(By.id("password")).sendKeys("^Chris-tophe^");
+        driver.findElement(By.id("username")).sendKeys("Christt");
+        driver.findElement(By.id("password")).sendKeys("^asdfghj-kl");
         driver.findElement(By.name("login")).click();
 
     }
@@ -46,7 +46,7 @@ public class LoginStepDefinition {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.woocommerce-MyAccount-content p")));
         String getUserName = driver.findElement(By.cssSelector("div.woocommerce-MyAccount-content p")).getText();
-        Assert.assertEquals("Hello Christ (not Christ? Log out)",getUserName);
+        Assert.assertEquals("Hello Christt (not Christt? Log out)",getUserName);
         System.out.println(getUserName);
         //driver.findElement(By.linkText("Logout")).click();
     }
